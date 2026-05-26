@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Monster Mayhem</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+ <div id="game-container">
+  <h1 id="title">Monster Mayhem</h1>
+
+  <!-- Stats bar -->
+  <div id="stats-bar">
+    <span id="crystal-score">
+  <img id="crystal-icon" src="Assets/0001s-0023-Layer-0-copy-23.png" alt="crystal"/>
+  <span id="crystal-count">0 / 0</span>
+  </span>
+    <span id="timer">⏱ 15s</span>
+  </div>
+
+  <div id="info-panel">
+    <span id="selected-info">No hex selected</span>
+  </div>
+  <p id="status-bar">Click your monster to begin!</p>
+  <div id="board"></div>
+</div>
+
+<!-- WIN SCREEN — hidden until all crystals collected -->
+<div id="win-screen" class="hidden">
+  <div id="win-box">
+    <h2>You Win!</h2>
+    <p id="win-time"></p>
+    <p id="win-score"></p>
+    <button onclick="restartGame()">Play Again</button>
+  </div>
+</div>
+
+<!-- GAME OVER SCREEN — hidden until timer hits 0 -->
+<div id="gameover-screen" class="hidden">
+  <div id="gameover-box">
+    <h2>💀 Game Over 💀</h2>
+    <p id="gameover-score"></p>
+    <p>You ran out of time!</p>
+    <button onclick="restartGame()">Try Again</button>
+  </div>
+</div>
+
+  <script src="game.js"></script>
+
+</body>
+</html>
